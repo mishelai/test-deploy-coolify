@@ -26,7 +26,7 @@ export default function LandingPage() {
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0 mx-auto">
           <div className="flex gap-2 items-center text-xl font-bold">
             <Rocket className="h-6 w-6 text-primary" />
-            <span>Next.js on Coolify</span>
+            <span>Mishels New Website</span>
           </div>
           <div className="flex flex-1 items-center justify-end space-x-4">
             <ModeToggle />
@@ -37,10 +37,10 @@ export default function LandingPage() {
                 rel="noreferrer"
                 className="hover:text-primary"
               >
-                Coolify Docs
+                Google
               </Link>
               <Link
-                href="https://github.com/coollabsio/coolify"
+                href="https://google.com"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -66,7 +66,7 @@ export default function LandingPage() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    Deploy Next.js Apps with Coolify
+                    Deploy Next.js Apps very easily
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
                     Learn how to deploy your Next.js applications on Coolify -
@@ -75,7 +75,7 @@ export default function LandingPage() {
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button size="lg" className="gap-1">
-                    Watch Tutorial <ArrowRight className="h-4 w-4" />
+                    Mishel is here also <ArrowRight className="h-4 w-4" />
                   </Button>
                   <Link
                     href="https://coolify.io"
@@ -83,7 +83,7 @@ export default function LandingPage() {
                     rel="noreferrer"
                   >
                     <Button variant="outline" size="lg">
-                      Visit Coolify
+                      Visit mishels home office
                     </Button>
                   </Link>
                 </div>
