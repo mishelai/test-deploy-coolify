@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import Datacenter from "@/public/datacenter.webp";
 import { ModeToggle } from "@/components/ui/ThemeToggle";
+import { ContactForm } from "@/components/ContactForm";
 
 export default function LandingPage() {
   return (
@@ -32,7 +33,7 @@ export default function LandingPage() {
             <ModeToggle />
             <nav className="flex items-center space-x-2">
               <Link
-                href="https://coolify.io"
+                href="google.com"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-primary"
@@ -228,6 +229,22 @@ export default function LandingPage() {
                 </Button>
               </Link>
             </div>
+          </div>
+        </section>
+
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6 mx-auto">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-8">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Contact Us
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
+                  Have questions about deploying on Coolify? Get in touch with us.
+                </p>
+              </div>
+            </div>
+            <ContactForm />
           </div>
         </section>
       </main>
