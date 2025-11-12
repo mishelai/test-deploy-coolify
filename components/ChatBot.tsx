@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
@@ -29,19 +29,30 @@ export function ChatBot() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const sendMessage = async () => {
     if (!input.trim() || isLoading) return;
 
+    const messageText = input.trim();
+
     const userMessage: ChatMessage = {
       id: Date.now().toString(),
       role: "user",
-      parts: [{ type: "text", text: input }],
+      parts: [{ type: "text", text: messageText }],
     };
 
-    setMessages((prev) => [...prev, userMessage]);
+    // Clear input and focus immediately
     setInput("");
     setIsLoading(true);
+
+    // Add user message to the chat
+    setMessages((prev) => [...prev, userMessage]);
+
+    // Refocus the input field after a small delay
+    setTimeout(() => {
+      inputRef.current?.focus();
+    }, 50);
 
     try {
       // TODO: Replace with your n8n webhook URL
@@ -57,7 +68,7 @@ export function ChatBot() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          message: userMessage.parts[0].text,
+          message: messageText,
           timestamp: new Date().toISOString(),
         }),
       });
@@ -240,12 +251,14 @@ export function ChatBot() {
             <div className="p-4 border-t">
               <div className="flex gap-2">
                 <Input
+                  ref={inputRef}
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="Type your message..."
                   disabled={isLoading}
                   className="flex-1"
+                  autoFocus
                 />
                 <Button
                   onClick={sendMessage}
