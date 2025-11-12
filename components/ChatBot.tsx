@@ -11,7 +11,7 @@ import {
   ConversationEmptyState,
   ConversationScrollButton,
 } from "@/components/ui/conversation";
-import { Message, MessageContent, MessageAvatar } from "@/components/ui/message";
+import { Message, MessageContent } from "@/components/ui/message";
 import { Response } from "@/components/ui/response";
 
 interface ChatMessage {
@@ -180,7 +180,7 @@ export function ChatBot() {
                     <div className="space-y-2">
                       <h3 className="text-lg font-semibold">Welcome to AI Chat</h3>
                       <p className="text-sm text-muted-foreground max-w-xs">
-                        I'm here to help answer your questions and assist you. Click the button below to start our conversation.
+                        I&apos;m here to help answer your questions and assist you. Click the button below to start our conversation.
                       </p>
                     </div>
                     <Button onClick={handleStartChat} size="lg" className="mt-2">
