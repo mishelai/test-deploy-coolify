@@ -98,7 +98,7 @@ export function ContactForm() {
       <CardHeader>
         <CardTitle>Get in Touch</CardTitle>
         <CardDescription>
-          Fill out the form below and we'll get back to you soon.
+          Fill out the form below and we&apos;ll get back to you soon.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -174,7 +174,7 @@ export function ContactForm() {
           {success && (
             <div className="flex items-center gap-2 text-sm text-green-600 bg-green-50 dark:bg-green-900/20 p-3 rounded-md">
               <CheckCircle2 className="h-4 w-4" />
-              Thank you! We'll be in touch soon.
+              Thank you! We&apos;ll be in touch soon.
             </div>
           )}
 
