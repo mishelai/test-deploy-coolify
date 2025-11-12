@@ -19,6 +19,7 @@ import {
 import Datacenter from "@/public/datacenter.webp";
 import { ModeToggle } from "@/components/ui/ThemeToggle";
 import { ContactForm } from "@/components/ContactForm";
+import { ChatBot } from "@/components/ChatBot";
 
 export default function LandingPage() {
   return (
@@ -284,6 +285,7 @@ export default function LandingPage() {
           </div>
         </div>
       </footer>
+      <ChatBot />
     </div>
   );
 }

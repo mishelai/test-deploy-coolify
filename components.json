@@ -17,5 +17,8 @@
     "lib": "@/lib",
     "hooks": "@/hooks"
   },
-  "iconLibrary": "lucide"
+  "iconLibrary": "lucide",
+  "registries": {
+    "@elevenlabs-ui": "https://ui.elevenlabs.io/r/{name}.json"
+  }
 }
